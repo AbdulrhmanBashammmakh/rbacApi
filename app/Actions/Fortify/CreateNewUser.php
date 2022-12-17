@@ -38,10 +38,10 @@ class CreateNewUser implements CreatesNewUsers
             'remember_token' => Str::random(20),
 
         ]);
-        $permission_new_user = Permission::where('table_name','=','users')->pluck('id')->toArray();
+      //  $permission_new_user = Permission::where('table_name','=','users')->pluck('id')->toArray();
 
-        $user_role = Role::where('key','User')->first();
-        $user_role->permission()->sync( $permission_new_user);
+      //  $user_role = Role::where('key','User')->first();
+      //  $user_role->permission()->sync( $permission_new_user);
 
         return $user;
 
